@@ -1,3 +1,18 @@
-body {
-	background-color: #f50;
+section#icons {
+	background-color: #dfd;
+	height: 100vh;
+}
+section#example {
+	height: 100vh;
+	padding-top: 10px;
+	background-color: #Fdd;
+}
+.box {
+	height: 100px;
+	border: 2px solid red;
+}
+.box_in {
+	height: 50px;
+	border: 2px dashed purple;
+	background-color: #0f0;
 }
