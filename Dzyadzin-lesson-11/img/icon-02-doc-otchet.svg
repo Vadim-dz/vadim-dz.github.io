@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="70px" height="70px" viewBox="0 0 70 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-02-doc-otchet</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="kontur-products-icons-features-iconset" transform="translate(-400.000000, -510.000000)">
+            <g id="Text" transform="translate(68.000000, 51.000000)"></g>
+            <g id="icon-02-doc-otchet" transform="translate(400.000000, 510.000000)" stroke-width="2" stroke="#A23A99">
+                <g id="Icon-2" transform="translate(4.000000, 11.000000)">
+                    <g id="Paper-2">
+                        <polyline id="Rectangle-1501" points="16 42 0 42 0 0 32 0 32 17"></polyline>
+                        <path d="M4,12 L28,12 L4,12 Z" id="Path-1625"></path>
+                        <path d="M4,37 L16,37 L4,37 Z" id="Path-1627"></path>
+                        <path d="M4,8 L28,8 L4,8 Z" id="Path-1626"></path>
+                    </g>
+                    <g id="Paper-1" transform="translate(16.000000, 17.000000)">
+                        <rect id="Rectangle-1502" x="0" y="4" width="42" height="31"></rect>
+                        <rect id="Rectangle-1505" x="5" y="13" width="32" height="7"></rect>
+                        <rect id="Rectangle-1506" x="17" y="13" width="10" height="7"></rect>
+                        <path d="M10,20 L10,13" id="Rectangle-1507"></path>
+                        <path d="M4,9 L17,9 L4,9 Z" id="Path-1628"></path>
+                        <circle id="Oval-534" cx="33.5" cy="27.5" r="3.5"></circle>
+                        <polyline id="Rectangle-1502" points="4 4 4 0 46 0 46 31 42 31"></polyline>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
