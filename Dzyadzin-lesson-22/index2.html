@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>21 jQuery</title>
+
+    <!-- Bootstrap -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,700i&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style2.css">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+   
+
+    <header id="main">
+      <div class="container">
+        <div class="row main-head">
+          <div class="col-xs-6 main-logo">
+            <div class="main-logo-border text-center">
+              <p><span class="logo-color">S</span>mart</p>
+            </div>
+          </div>
+          <div class="col-xs-6 main-nav">
+            <a href="#" class="main-nav-bar">
+              <span class="line"></span>
+            </a>
+          </div>
+        </div>
+        <div class="row main-text">
+          <div class="col-lg-offset-2 col-lg-8 col-md-8 col-md-offset-2">
+            <h1 class="wow tada"><span class="logo-color">Smart</span> Agency Landign Page</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, fuga provident. Libero magni quibusdam labore ad iste saepe hic, maxime qui ipsum tempore beatae, volu tomi ptates doloremque rerum aspernatur dolorum at!</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="box">
+            
+          </div>
+          <div class="col-xs-4 col-xs-offset-4">
+            <ul class="list">
+              <li class="item" id="item-1">Lorem ipsum dolor.</li>
+              <li class="item" id="item-2">Excepturi, nemo, corporis.</li>
+              <li class="item" id="item-3">Eos corporis, iusto.</li>
+              <li class="item" id="item-4">Expedita, nulla, doloribus.</li>
+              <li class="item" id="item-5">Qui, cumque facere.</li>
+            </ul>
+            <span id="link">Показать текст</span>
+            <div id="table" class="table">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem optio odit aliquid tempore quam perspiciatis soluta, ipsum necessitatibus id incidunt dolorem eos, voluptatibus temporibus quidem blanditiis, magnam molestias? Excepturi sapiente soluta veritatis magnam obcaecati tempora animi recusandae, iure eum cum, harum quod dolore ad, voluptate, dolor repellendus. Velit, beatae tempora.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+ 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script>
+      $(document).ready(function() {
+        // alert('сайт загружен');
+        $('.box').mouseenter(function() {
+          $(this).css('background-color', 'green');
+        });
+        $('.box').mouseleave(function() {
+          $(this).css('background-color', 'red');
+        });
+        console.log('сайт загружен');
+        $('#item-3').addClass('li-green');
+        $('#item-3').click(function() {
+          $(this).css('background-color', 'red')
+        });
+        $('#link').click(function() {
+          $('#table').show(1000);
+        });
+        $('#link').dblclick(function() {
+          $('#table').hide(1000);
+        })
+      })
+    </script>
+
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/snap.svg-min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="slick/slick.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+    <script> // Скрипт перелистывания отзывов
+      $(document).ready(function(){
+        $('.feedback-slider').slick({
+          infinite: true,
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          arrows: true,
+          prevArrow: '<i class="fa arrows-left feedback-slider-arrows fa-chevron-left"></i>',
+          nextArrow: '<i class="fa arrows-right feedback-slider-arrows fa-chevron-right"></i>',
+          dots: true,
+          responsive: [
+            {
+              breakpoint: 767,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+          ]
+        });
+      });
+    </script>
+    <script> // Скрипт отправки письма
+      $(document).ready(function() {
+        $("#main-form-ajax").submit(function() {
+          $.ajax({
+            type: "POST",
+            url: "mail.php",
+            data: $(this).serialize()
+          }).done(function() {
+            $(this).find("input").val("");
+            $('#modal-1').modal('show');
+            $("#main-form-ajax").trigger("reset");
+          });
+          return false;
+        });
+        
+      });
+    </script>
+  </body>
+</html>
